@@ -37,19 +37,21 @@ with st.container():
 
     sns.barplot(x="order_item_id", y="product_category_name", data=sum_order_items_df.head(10), palette="deep", ax=ax1, hue="product_category_name", legend=False)
     ax1.set_ylabel(None)
-    ax1.set_xlabel(labelsize=40)
+    ax1.set_xlabel(None)
     ax1.set_title("Most Popular Product", loc="center", fontsize=40)
     ax1.tick_params(axis="y", labelsize=36)
+    ax1.tick_params(axis="x", labelsize=36)
 
     fig2, ax2 = plt.subplots(figsize=(24, 24))
     sns.barplot(x="order_item_id", y="product_category_name", data=sum_order_items_df.sort_values(by="order_item_id", ascending=True).head(10), palette="deep", ax=ax2, hue="product_category_name", legend=False)
     ax2.set_ylabel(None)
-    ax2.set_xlabel(labelsize=40)
+    ax2.set_xlabel(None)
     ax2.invert_xaxis()
     ax2.yaxis.set_label_position("right")
     ax2.yaxis.tick_right()
     ax2.set_title("Least Popular Product", loc="center", fontsize=40)
     ax2.tick_params(axis="y", labelsize=36)
+    ax2.tick_params(axis="x", labelsize=36)
 
     st.pyplot(fig1)
     st.pyplot(fig2)
