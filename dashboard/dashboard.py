@@ -21,10 +21,12 @@ with st.container():
     col1, col2 = st.columns(2)
 
     with col1:
+        st.subheader("Most Popular Product")
         max_order = sum_order_items_df["order_item_id"][0]
         st.metric(sum_order_items_df["product_category_name"][0]+" sales", value=max_order)
 
     with col2:
+        st.subheader("Least Popular Product")
         min_order = sum_order_items_df["order_item_id"].iloc[-1]
         st.metric(sum_order_items_df["product_category_name"].iloc[-1]+" sales", value=min_order)
 
