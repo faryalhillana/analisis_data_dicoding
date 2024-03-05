@@ -11,7 +11,7 @@ from streamlit_folium import st_folium
 
 sns.set(style='dark')
 
-all_df = pd.read_csv("C:/Users/FARYAL/PycharmProjects/pythonProject3/dashboard_data.csv")
+all_df = pd.read_csv("dashboard/dashboard_data.csv")
 
 st.header("Olist's Brazilian E-Commerce Public Dataset Dashboard")
 st.subheader("by Faryal Hillan")
